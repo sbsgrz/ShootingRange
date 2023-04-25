@@ -1,9 +1,9 @@
-﻿
-
-namespace ShootingRange
+﻿namespace ShootingRange
 {
     public abstract class ShooterBase : IShooter
     {
+        protected const int Min = 0;
+        protected const int Max = 10;
         public string firstName { get; private set; }
         public string lastName { get; private set; }
 
@@ -28,7 +28,15 @@ namespace ShootingRange
 
         public void AddResult(string result)
         {
-            throw new NotImplementedException();
+            try
+            {
+                int r = Int32.Parse(result);
+                this.AddResult(r);
+            }
+            catch
+            {
+                throw new Exception("String to Int");
+            }
         }
 
         public void AddResult(double result)

@@ -11,7 +11,7 @@ namespace ShootingRange
         private List<int> results = new List<int>();
         public override void AddResult(int result)
         {
-            if ((result >= 1) && (result <= 10))
+            if ((result >= Min) && (result <= Max))
                 this.results.Add(result);
             else
                 throw new Exception("Parameter out of range.");
