@@ -1,8 +1,15 @@
-﻿
+﻿/*
+ * ShooterSaved
+ * Events
+ * Menu
+ * CheckList
+ *      Tests
+ */
 
 using ShootingRange;
 
-ShooterInMemory shooterIM = new ShooterInMemory();
+ShooterInMemory shooterIM = new ShooterInMemory("John","Fleeting");
+ShooterSaved shooterS = new ShooterSaved("Mary","NonVolatile");
 
 while(true)
 {
@@ -16,26 +23,36 @@ while(true)
         try
         {
                 shooterIM.AddResult(input);
+                shooterS.AddResult(input);
         }
         catch(Exception ex)
         {
             // Console.WriteLine(ex.ToString());
             // Console.WriteLine();
-            Console.WriteLine(ex.Message);
+            Console.WriteLine($"{ex.Source}:  {ex.Message}");
         }
     }
 }
 
 Statistics shooterIMStatistics = shooterIM.GetStatistics();
+Statistics shooterSStatistics = shooterS.GetStatistics();
 
+Console.WriteLine($"{shooterIM.firstName} {shooterIM.lastName}");
 Console.WriteLine($"General score: {shooterIMStatistics.Sum}");
 Console.WriteLine($"Average score: {shooterIMStatistics.Avg}");
 Console.WriteLine($"Number of shots fired: {shooterIMStatistics.Count}");
 Console.WriteLine($"Focus on the shield: {shooterIMStatistics.focusOnTheShield}");
 Console.WriteLine($"Max: {shooterIMStatistics.Max}");
 Console.WriteLine($"Min: {shooterIMStatistics.Min}");
+Console.WriteLine();
 
-
+Console.WriteLine($"{shooterS.firstName} {shooterS.lastName}");
+Console.WriteLine($"General score: {shooterSStatistics.Sum}");
+Console.WriteLine($"Average score: {shooterSStatistics.Avg}");
+Console.WriteLine($"Number of shots fired: {shooterSStatistics.Count}");
+Console.WriteLine($"Focus on the shield: {shooterSStatistics.focusOnTheShield}");
+Console.WriteLine($"Max: {shooterSStatistics.Max}");
+Console.WriteLine($"Min: {shooterSStatistics.Min}");
 
 
 Console.ReadLine();
