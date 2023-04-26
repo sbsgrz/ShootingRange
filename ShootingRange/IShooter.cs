@@ -12,6 +12,7 @@ namespace ShootingRange
         void AddResult(string result);
         void AddResult(double result);
         void AddResult(char result);
+        List<int> GetResults();
 
         Statistics GetStatistics();
     }

@@ -16,5 +16,10 @@ namespace ShootingRange
             else
                 throw new Exception("Parameter out of range.");
         }
+
+        public override List<int> GetResults()
+        {
+            return results;
+        }
     }
 }

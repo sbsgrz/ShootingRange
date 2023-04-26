@@ -23,35 +23,38 @@
 
         public void AddResult(float result)
         {
-            throw new NotImplementedException();
+            AddResult((int)result);
         }
 
         public void AddResult(string result)
         {
-            try
-            {
-                int r = Int32.Parse(result);
+            if (int.TryParse(result, out int r))
                 this.AddResult(r);
-            }
-            catch
-            {
-                throw new Exception("String to Int");
-            }
+            else
+                throw new Exception("Wrong string format.");
         }
 
         public void AddResult(double result)
         {
-            throw new NotImplementedException();
+            AddResult((int)result);
         }
 
         public void AddResult(char result)
         {
-            throw new NotImplementedException();
+            if (char.IsDigit(result))
+                AddResult(char.GetNumericValue(result));
+            else
+                throw new Exception("Wrong char.");
         }
+
+        public abstract List<int> GetResults();
 
         public Statistics GetStatistics()
         {
-            throw new NotImplementedException();
+            Statistics statistics= new Statistics(GetResults());
+            return statistics;
         }
+
+        
     }
 }
