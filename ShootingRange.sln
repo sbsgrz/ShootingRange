@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShootingRange", "ShootingRa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShootingRange.Tests", "ShootingRange.Tests\ShootingRange.Tests.csproj", "{F4E247A8-E6CE-43AD-8DAA-8CA069254F29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statistics.Tests", "Statistics.Tests\Statistics.Tests.csproj", "{16D6925C-3789-44CA-980F-E51B063F87CB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{F4E247A8-E6CE-43AD-8DAA-8CA069254F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4E247A8-E6CE-43AD-8DAA-8CA069254F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4E247A8-E6CE-43AD-8DAA-8CA069254F29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16D6925C-3789-44CA-980F-E51B063F87CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16D6925C-3789-44CA-980F-E51B063F87CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16D6925C-3789-44CA-980F-E51B063F87CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16D6925C-3789-44CA-980F-E51B063F87CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
