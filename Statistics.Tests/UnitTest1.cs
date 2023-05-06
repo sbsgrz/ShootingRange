@@ -17,7 +17,7 @@ namespace ShootingRange.Tests
 
             
             
-            Assert.Pass();
+            Assert.Pass(); 
         }
     }
 }
