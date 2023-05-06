@@ -8,7 +8,7 @@
         
         public ShooterInMemory(string firstName, string lastName) : base(firstName, lastName) { }
 
-        public override event ResultAddedDelegate ResultAdded;
+        public override event ResultAddedDelegate? ResultAdded;
 
         public override void AddResult(int result)
         {

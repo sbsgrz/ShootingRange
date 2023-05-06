@@ -17,9 +17,14 @@
 
         public Statistics(List <int> results)
         {
-            Min = results.Min(); Max = results.Max();
-            Sum = results.Sum(); Count = results.Count();
-            focusOnTheShield = Max - Min;
+            Count = results.Count();
+            if( Count > 0 )
+            {
+                Min = results.Min();
+                Max = results.Max();
+                Sum = results.Sum();
+                focusOnTheShield = Max - Min;
+            }
         }
     }
 }

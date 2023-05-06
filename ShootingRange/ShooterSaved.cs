@@ -6,11 +6,13 @@ namespace ShootingRange
     {
         public const string fileName = "results.txt";
 
+        public override event ResultAddedDelegate? ResultAdded;
+
         public ShooterSaved() : base() { }
 
         public ShooterSaved(string firstName, string lastName) : base(firstName, lastName) { }
 
-        public override event ResultAddedDelegate ResultAdded;
+        
 
         public override void AddResult(int result)
         {
