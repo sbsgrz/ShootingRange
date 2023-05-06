@@ -1,11 +1,4 @@
-﻿/*
- * Events
- * Menu
- * CheckList - requirements
- * Tests
- */
-
-using ShootingRange;
+﻿using ShootingRange;
 
 static void ShooterResultAdded(object sender, EventArgs e)
 {
