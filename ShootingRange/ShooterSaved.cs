@@ -10,11 +10,15 @@ namespace ShootingRange
 
         public ShooterSaved(string firstName, string lastName) : base(firstName, lastName) { }
 
+        public override event ResultAddedDelegate ResultAdded;
+
         public override void AddResult(int result)
         {
             using (var writer = File.AppendText(fileName))
             {
                 writer.WriteLine(result);
+                if(ResultAdded!= null)
+                    ResultAdded(this, new EventArgs());
             }
         }
 

@@ -7,6 +7,9 @@
         public string firstName { get; private set; }
         public string lastName { get; private set; }
 
+        public delegate void ResultAddedDelegate(object sender, EventArgs e);
+        public abstract event ResultAddedDelegate ResultAdded;
+
         public ShooterBase()
         {
             this.firstName = string.Empty;
