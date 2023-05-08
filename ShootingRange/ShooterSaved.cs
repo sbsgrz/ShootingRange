@@ -11,7 +11,7 @@ namespace ShootingRange
         
         public ShooterSaved(string firstName, string lastName) : base(firstName, lastName) { }
 
-        public override void AddResult(int result)
+        public override void AddResult(float result)
         {
             if ((result <= Max) && (result >= Min))
             {
@@ -26,16 +26,16 @@ namespace ShootingRange
                 throw new Exception("Parameter out of range");
         }
 
-        public override List<int> GetResults()
+        public override List<float> GetResults()
         {
-            List<int> results = new List<int>();
+            List<float> results = new List<float>();
             
             using (var reader = File.OpenText(FileName))
             {
                 var line = reader.ReadLine();
                 while (line != null)
                 {
-                    results.Add(int.Parse(line));
+                    results.Add(float.Parse(line));
                     line = reader.ReadLine();
                 }
             }

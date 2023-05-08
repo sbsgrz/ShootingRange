@@ -2,9 +2,9 @@
 {
     public class Statistics
     {
-        public int Min { get; private set; }
-        public int Max { get; private set; }
-        public int Sum { get; private set; }
+        public float Min { get; private set; }
+        public float Max { get; private set; }
+        public float Sum { get; private set; }
         public int Count { get; private set; }
         public float FocusOnTheShield { get; set; }
 
@@ -16,7 +16,7 @@
             }
         }
         
-        public Statistics(List <int> results)
+        public Statistics(List <float> results)
         {
             Count = results.Count();
             if( Count > 0 )

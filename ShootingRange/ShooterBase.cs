@@ -2,8 +2,8 @@
 {
     public abstract class ShooterBase : IShooter
     {
-        protected const int Min = 0;
-        protected const int Max = 10;
+        protected const float Min = 0;
+        protected const float Max = 10;
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public delegate void ResultAddedDelegate(object sender, EventArgs e);
@@ -21,16 +21,16 @@
             this.LastName = LastName;
         }
 
-        public abstract void AddResult(int result);
+        public abstract void AddResult(float result);
 
-        public void AddResult(float result)
+        public void AddResult(int result)
         {
-            AddResult((int)result);
+            AddResult((float)result);
         }
 
         public void AddResult(string result)
         {
-            if (int.TryParse(result, out int r))
+            if (float.TryParse(result, out float r))
                 this.AddResult(r);
             else
                 throw new Exception("Wrong string format.");
@@ -49,7 +49,7 @@
                 throw new Exception("Wrong char.");
         }
 
-        public abstract List<int> GetResults();
+        public abstract List<float> GetResults();
 
         public Statistics GetStatistics()
         {
