@@ -3,9 +3,8 @@ namespace ShootingRange
 {
     public interface IShooter
     {
-        public string firstName { get; }
-        public string lastName { get; }
-
+        public string FirstName { get; }
+        public string LastName { get; }
 
         void AddResult(int result);
         void AddResult(float result);
@@ -13,7 +12,6 @@ namespace ShootingRange
         void AddResult(double result);
         void AddResult(char result);
         List<int> GetResults();
-
         Statistics GetStatistics();
     }
 }

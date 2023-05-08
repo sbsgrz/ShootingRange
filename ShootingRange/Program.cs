@@ -31,8 +31,6 @@ while (true)
         }
         catch(Exception ex)
         {
-            // Console.WriteLine(ex.ToString());
-            // Console.WriteLine();
             Console.WriteLine($"{ex.Source}:  {ex.Message}");
         }
     }
@@ -43,13 +41,13 @@ Statistics shooterSStatistics = shooterS.GetStatistics();
 
 Console.WriteLine();
 Console.WriteLine();
-Console.WriteLine($"{shooterIM.firstName} {shooterIM.lastName}");
+Console.WriteLine($"{shooterIM.FirstName} {shooterIM.LastName}");
 if (shooterIMStatistics.Count > 0)
 {
     Console.WriteLine($"General score: {shooterIMStatistics.Sum}");
     Console.WriteLine($"Average score: {shooterIMStatistics.Avg}");
     Console.WriteLine($"Number of shots fired: {shooterIMStatistics.Count}");
-    Console.WriteLine($"Focus on the shield: {shooterIMStatistics.focusOnTheShield} (the lower the value, the better)");
+    Console.WriteLine($"Focus on the shield: {shooterIMStatistics.FocusOnTheShield} (the lower the value, the better)");
     Console.WriteLine($"Max: {shooterIMStatistics.Max}");
     Console.WriteLine($"Min: {shooterIMStatistics.Min}");
 }
@@ -59,14 +57,13 @@ else
 }
 Console.WriteLine();
 
-
-Console.WriteLine($"{shooterS.firstName} {shooterS.lastName}");
+Console.WriteLine($"{shooterS.FirstName} {shooterS.LastName}");
 if(shooterSStatistics.Count > 0)
 {
     Console.WriteLine($"General score: {shooterSStatistics.Sum}");
     Console.WriteLine($"Average score: {shooterSStatistics.Avg}");
     Console.WriteLine($"Number of shots fired: {shooterSStatistics.Count}");
-    Console.WriteLine($"Focus on the shield: {shooterSStatistics.focusOnTheShield} (the lower the value, the better)");
+    Console.WriteLine($"Focus on the shield: {shooterSStatistics.FocusOnTheShield} (the lower the value, the better)");
     Console.WriteLine($"Max: {shooterSStatistics.Max}");
     Console.WriteLine($"Min: {shooterSStatistics.Min}");
 }
@@ -74,7 +71,5 @@ else
 {
     Console.WriteLine("No shot was fired");
 }
-
-
 
 Console.ReadLine();

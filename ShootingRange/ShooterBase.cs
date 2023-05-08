@@ -4,22 +4,21 @@
     {
         protected const int Min = 0;
         protected const int Max = 10;
-        public string firstName { get; private set; }
-        public string lastName { get; private set; }
-
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
         public delegate void ResultAddedDelegate(object sender, EventArgs e);
         public abstract event ResultAddedDelegate ResultAdded;
 
         public ShooterBase()
         {
-            this.firstName = string.Empty;
-            this.lastName = string.Empty;
+            this.FirstName = string.Empty;
+            this.LastName = string.Empty;
         }
 
-        public ShooterBase(string firstName, string lastName)
+        public ShooterBase(string FirstName, string LastName)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
         }
 
         public abstract void AddResult(int result);
