@@ -63,7 +63,6 @@ namespace ShootingRange.Tests
             shooter.AddResult(9);
             shooter.AddResult(5);
 
-
             Statistics stats = shooter.GetStatistics();
             Assert.AreEqual(6, stats.Avg);
         }
